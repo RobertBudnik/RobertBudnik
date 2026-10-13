@@ -22,13 +22,6 @@ MAX_PROJECTS = 6
 START = "<!-- PROJECTS:START -->"
 END = "<!-- PROJECTS:END -->"
 
-CARD = (
-    "https://github-readme-stats.shion.dev/api/pin/"
-    "?username={user}&repo={repo}&hide_border=true&bg_color=161b22"
-    "&title_color=e6edf3&text_color=8b949e&icon_color=8b949e"
-)
-
-
 def fetch_public_repos():
     url = f"https://api.github.com/users/{USERNAME}/repos?type=owner&sort=pushed&per_page=100"
     req = urllib.request.Request(url, headers={"Accept": "application/vnd.github+json"})
@@ -51,21 +44,19 @@ def pick(repos):
     return out[:MAX_PROJECTS]
 
 
+def cell(text):
+    return (text or "").replace("|", "\\|").replace("\n", " ").strip()
+
+
 def render(repos):
     if not repos:
-        return (
-            "```text\n"
-            "> ls ~/projects\n"
-            "  // w budowie — pierwsze projekty z cyberbezpieczeństwa już niedługo\n"
-            "```"
-        )
-    cards = []
+        return "Pierwsze projekty z cyberbezpieczeństwa są w przygotowaniu."
+    rows = ["| Projekt | Co robi | Technologie |", "|---|---|---|"]
     for r in repos:
-        img = CARD.format(user=USERNAME, repo=r["name"])
-        cards.append(
-            f'<a href="{r["html_url"]}"><img width="49%" src="{img}" alt="{r["name"]}"/></a>'
-        )
-    return '<p align="center">\n  ' + "\n  ".join(cards) + "\n</p>"
+        tech = [r.get("language")] + [t for t in r.get("topics", [])[:3]]
+        tech = ", ".join(dict.fromkeys(t for t in tech if t)) or "—"
+        rows.append(f"| [{cell(r['name'])}]({r['html_url']}) | {cell(r.get('description')) or '—'} | {cell(tech)} |")
+    return "\n".join(rows)
 
 
 def main():
