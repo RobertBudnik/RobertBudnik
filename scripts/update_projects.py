@@ -45,10 +45,10 @@ def pick(repos):
     return out[:MAX_PROJECTS]
 
 
-PICTURE = """<picture>
+PICTURE = """<p><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/projects-dark.svg">
   <img alt="{alt}" src="assets/projects-light.svg" width="100%">
-</picture>"""
+</picture></p>"""
 
 
 def render(repos):
