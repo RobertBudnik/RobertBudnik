@@ -27,7 +27,7 @@
 
 <p><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/certs-dark.svg">
-  <img alt="Certyfikaty i kursy (lista z data/certs.json)" src="assets/certs-light.svg" width="100%">
+  <img alt="Certyfikaty i kursy: lista w przygotowaniu (3 puste sloty)" src="assets/certs-light.svg" width="100%">
 </picture></p>
 
 <p><picture>

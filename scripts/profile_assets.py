@@ -6,7 +6,7 @@ Generuje grafiki SVG do README (koncept „ssh / OSI”), każdą w wersji -dark
     tracks    – trzy kafle: Linux, Python, Security
     tools     – siatka narzędzi z monogramami
     projects  – listing `ls -la ~/projects` z publicznych repozytoriów
-    certs     – certyfikaty i kursy z data/certs.json
+    certs     – certyfikaty i kursy z data/certs.json (aktualizuje też alt w README)
     activity  – fala kontrybucji z ostatnich 365 dni
     contact   – `ping robert` z dużym adresem e-mail
 
@@ -418,10 +418,32 @@ def certs(t, items):
         body.append(G600.path(clip(G600, str(item.get("name", "")), 16, sw - 40), 16, x + 20, y + 60, t["strong"]))
         meta = " · ".join(str(v) for v in (item.get("issuer"), item.get("year")) if v)
         body.append(MONO.path(clip(MONO, meta, 12, sw - 40), 12, x + 20, y + 84, t["dim"]))
-    label = "Certyfikaty i kursy: " + ("; ".join(
-        f"{c.get('name')} ({c.get('issuer')}, {c.get('year')}, {c.get('status')})" for c in items) if items
-        else "lista w przygotowaniu")
-    return svg(h, label, "\n".join(body))
+    return svg(h, certs_alt(items), "\n".join(body))
+
+
+def certs_alt(items):
+    """Opis grafiki certyfikatów – trafia do SVG i do atrybutu alt w README."""
+    if not items:
+        return "Certyfikaty i kursy: lista w przygotowaniu (3 puste sloty)"
+    parts = []
+    for c in items:
+        meta = ", ".join(str(v) for v in (c.get("issuer"), c.get("year")) if v)
+        status = c.get("status") or "w trakcie"
+        parts.append(f"{c.get('name', '')}" + (f" ({meta})" if meta else "") + f" – {status}")
+    return "Certyfikaty i kursy: " + "; ".join(parts)
+
+
+def update_readme_certs_alt(items):
+    """Podmienia alt obrazka certs-light.svg w README na aktualną listę."""
+    readme = ROOT / "README.md"
+    if not readme.exists():
+        return
+    content = readme.read_text(encoding="utf-8")
+    new = re.sub(r'<img alt="[^"]*" src="assets/certs-light\.svg"',
+                 lambda _: f'<img alt="{esc(certs_alt(items))}" src="assets/certs-light.svg"', content)
+    if new != content:
+        readme.write_text(new, encoding="utf-8")
+        print(f"zapisano {readme} (alt certyfikatów)")
 
 
 def activity(t, days):
@@ -581,6 +603,8 @@ def main():
     out = Path(args.out) if args.out else ROOT / "assets"
 
     cert_items = SAMPLE_CERTS if args.sample else load_certs()
+    if not args.out:
+        update_readme_certs_alt(cert_items)
     for mode, t in THEMES.items():
         write(out / f"hero-{mode}.svg", hero(t))
         write(out / f"osi-{mode}.svg", osi(t))
