@@ -3,7 +3,8 @@ Aktualizuje sekcję projektów w README.md na podstawie PUBLICZNYCH repozytorió
 
 Bierze tylko repozytoria publiczne, własne (bez forków), niezarchiwizowane,
 i pomija repo profilowe (RobertBudnik/RobertBudnik).
-Podmienia treść między znacznikami:
+Wstawia obrazek projects-*.svg (rysowany przez profile_assets.py) i linki do repo
+między znacznikami:
     <!-- PROJECTS:START -->
     <!-- PROJECTS:END -->
 """
@@ -44,19 +45,22 @@ def pick(repos):
     return out[:MAX_PROJECTS]
 
 
-def cell(text):
-    return (text or "").replace("|", "\\|").replace("\n", " ").strip()
+PICTURE = """<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/projects-dark.svg">
+  <img alt="{alt}" src="assets/projects-light.svg" width="100%">
+</picture>"""
 
 
 def render(repos):
+    """Obrazek z listingiem (rysuje go scripts/profile_assets.py) i linki pod nim."""
     if not repos:
-        return "Pierwsze projekty z cyberbezpieczeństwa są w przygotowaniu."
-    rows = ["| Projekt | Co robi | Technologie |", "|---|---|---|"]
-    for r in repos:
-        tech = [r.get("language")] + [t for t in r.get("topics", [])[:3]]
-        tech = ", ".join(dict.fromkeys(t for t in tech if t)) or "—"
-        rows.append(f"| [{cell(r['name'])}]({r['html_url']}) | {cell(r.get('description')) or '—'} | {cell(tech)} |")
-    return "\n".join(rows)
+        alt = "Projekty: ls -la ~/projects – total 0, pierwsze projekty z cyberbezpieczeństwa są w przygotowaniu"
+        return PICTURE.format(alt=alt)
+    alt = "Projekty: " + "; ".join(
+        f"{r['name']}: {(r.get('description') or '').replace(chr(34), chr(39))}" for r in repos
+    )
+    links = " · ".join(f"[{r['name']}]({r['html_url']})" for r in repos)
+    return PICTURE.format(alt=alt) + "\n\n" + links
 
 
 def main():
