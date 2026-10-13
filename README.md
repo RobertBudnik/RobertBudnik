@@ -1,118 +1,77 @@
-<!-- Banner -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:0f3d2e,100:00ff9c&height=180&section=header&text=Robert%20Budnik&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=Student%20informatyki%20%7C%20Python%20%7C%20Linux%20%7C%20droga%20do%20cybersecurity&descSize=15&descAlignY=60" alt="banner"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0d1117,100:2d333b&height=160&text=ROBERT%20BUDNIK&fontSize=44&fontColor=e6edf3&fontAlign=50&fontAlignY=45&desc=computer%20science%20%C2%B7%20networks%20%C2%B7%20linux%20%C2%B7%20cybersecurity&descSize=14&descAlign=50&descAlignY=72&animation=fadeIn" alt="header"/>
 </p>
 
 <p align="center">
-  <a href="https://github.com/RobertBudnik">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=800&color=00FF9C&center=true&vCenter=true&width=600&lines=%24+whoami;Student+informatyki+%E2%80%94+Collegium+Da+Vinci%2C+Pozna%C5%84;Ucz%C4%99+si%C4%99%3A+sieci+%E2%80%A2+Linux+%E2%80%A2+Python;Cel%3A+cyberbezpiecze%C5%84stwo+%F0%9F%9B%A1%EF%B8%8F" alt="typing"/>
-  </a>
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=400&size=16&duration=2800&pause=900&color=8B949E&center=true&vCenter=true&width=520&lines=%24+whoami;student+informatyki+%E2%80%94+Pozna%C5%84;uczy+si%C4%99%3A+sieci+%2F+linux+%2F+python;kierunek%3A+cybersecurity" alt="typing"/>
 </p>
 
 <p align="center">
-  <a href="https://instagram.com/Budnik.jr_"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/></a>
-  <a href="mailto:robertbudnik30@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
-  <img src="https://komarev.com/ghpvc/?username=RobertBudnik&style=for-the-badge&color=00ff9c&label=Odwiedziny" alt="views"/>
+  <a href="https://instagram.com/Budnik.jr_"><img src="https://img.shields.io/badge/instagram-21262d?style=flat-square&logo=instagram&logoColor=e6edf3&labelColor=161b22" alt="Instagram"/></a>
+  <a href="mailto:robertbudnik30@gmail.com"><img src="https://img.shields.io/badge/email-21262d?style=flat-square&logo=gmail&logoColor=e6edf3&labelColor=161b22" alt="Email"/></a>
+  <img src="https://komarev.com/ghpvc/?username=RobertBudnik&style=flat-square&color=30363d&label=views" alt="views"/>
 </p>
 
----
+<br/>
 
-## 🧑‍💻 O mnie
+### `01` &nbsp;about
 
-```bash
-robert@github:~$ cat about.txt
+```yaml
+name:      Robert Budnik
+study:     Informatyka — Collegium Da Vinci, Poznań
+learning:  [ sieci komputerowe, Linux, Python ]
+goal:      cybersecurity
+status:    buduję pierwsze projekty z bezpieczeństwa
 ```
 
-- 🎓 Studiuję informatykę w **Collegium Da Vinci** w Poznaniu
-- 🛡️ Rozwijam się w kierunku **cyberbezpieczeństwa**
-- 🌱 Uczę się: **sieci komputerowych**, **Linuxa** i **Pythona**
-- 🔭 Aktualnie pracuję nad: **[REELS_MAKER](https://github.com/RobertBudnik/REELS_MAKER)**
-- 📫 Kontakt: **robertbudnik30@gmail.com**
+<br/>
 
----
+### `02` &nbsp;roadmap
 
-## 🛡️ Ścieżka: Cybersecurity
+| | obszar | zakres |
+|:-:|---|---|
+| `▸` | **Sieci** | OSI / TCP-IP, adresacja i podsieci, DNS, DHCP, routing, analiza ruchu |
+| `▸` | **Linux** | terminal, uprawnienia, procesy i usługi, Bash |
+| `▸` | **Python** | automatyzacja, skrypty narzędziowe, praca z API |
+| `▸` | **Security** | bezpieczeństwo sieci, hardening systemów, narzędzia do analizy |
 
-| Obszar | Czego się uczę |
-|---|---|
-| 🌐 **Sieci** | model OSI i TCP/IP, adresacja i podsieci, DNS, DHCP, routing, analiza ruchu |
-| 🐧 **Linux** | praca w terminalu, uprawnienia, procesy i usługi, skrypty Bash |
-| 🐍 **Python** | automatyzacja, skrypty narzędziowe, praca z API |
-| 🔐 **Security** | podstawy bezpieczeństwa sieci, hardening systemów, praca z narzędziami do analizy |
+<br/>
 
----
-
-## 🚀 Projekty
-
-<p align="center">
-  <a href="https://github.com/RobertBudnik/REELS_MAKER">
-    <img src="https://github-readme-stats.shion.dev/api/pin/?username=RobertBudnik&repo=REELS_MAKER&theme=radical&hide_border=true&bg_color=0d1117&title_color=00ff9c&icon_color=00ff9c" alt="REELS_MAKER"/>
-  </a>
-</p>
-
-### 🎬 [REELS_MAKER](https://github.com/RobertBudnik/REELS_MAKER) &nbsp;`🚧 w trakcie`
-
-System w Pythonie, który automatyzuje cały proces tworzenia krótkich filmów (Reels/Shorts) — od napisania historii, przez montaż i napisy, po zaplanowaną publikację na YouTube.
-
-- ✍️ **Generowanie historii** — Google Gemini API
-- 🗣️ **Lektor** — synteza mowy przez edge-tts
-- 🎞️ **Montaż wideo 9:16** — MoviePy + FFmpeg, tło pobierane przez yt-dlp
-- 💬 **Napisy słowo po słowie** — transkrypcja OpenAI Whisper
-- 📅 **Auto-publikacja** — YouTube Data API v3 (OAuth2), harmonogram i ponawianie przy błędach
+### `03` &nbsp;stack
 
 <p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=ffdd54"/>
-  <img src="https://img.shields.io/badge/Gemini_API-8E75B2?style=flat-square&logo=googlegemini&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Whisper-412991?style=flat-square&logo=openai&logoColor=white"/>
-  <img src="https://img.shields.io/badge/FFmpeg-007808?style=flat-square&logo=ffmpeg&logoColor=white"/>
-  <img src="https://img.shields.io/badge/YouTube_API-FF0000?style=flat-square&logo=youtube&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Python-21262d?style=for-the-badge&logo=python&logoColor=e6edf3"/>
+  <img src="https://img.shields.io/badge/C++-21262d?style=for-the-badge&logo=cplusplus&logoColor=e6edf3"/>
+  <img src="https://img.shields.io/badge/Bash-21262d?style=for-the-badge&logo=gnubash&logoColor=e6edf3"/>
+  <img src="https://img.shields.io/badge/Linux-21262d?style=for-the-badge&logo=linux&logoColor=e6edf3"/>
+  <img src="https://img.shields.io/badge/Git-21262d?style=for-the-badge&logo=git&logoColor=e6edf3"/>
+  <img src="https://img.shields.io/badge/VS_Code-21262d?style=for-the-badge&logo=visualstudiocode&logoColor=e6edf3"/>
 </p>
 
----
+<br/>
 
-## 🧰 Tech Stack
+### `04` &nbsp;projects
 
-**Języki**
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=ffdd54"/>
-  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white"/>
-</p>
+```text
+> ls ~/projects
+  // w budowie — pierwsze projekty z cyberbezpieczeństwa już niedługo
+```
 
-**Systemy i sieci**
-<p>
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Networking-0A66C2?style=for-the-badge&logo=cisco&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white"/>
-</p>
+<br/>
 
-**Narzędzia**
-<p>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
-  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white"/>
-  <img src="https://img.shields.io/badge/FFmpeg-007808?style=for-the-badge&logo=ffmpeg&logoColor=white"/>
-</p>
-
----
-
-## 📊 Statystyki GitHub
+### `05` &nbsp;stats
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.shion.dev/api?username=RobertBudnik&show_icons=true&include_all_commits=true&count_private=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=00ff9c&icon_color=00ff9c" alt="stats"/>
-  <img height="165" src="https://github-readme-stats.shion.dev/api/top-langs/?username=RobertBudnik&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=00ff9c" alt="top langs"/>
+  <img height="160" src="https://github-readme-stats.shion.dev/api?username=RobertBudnik&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=161b22&title_color=e6edf3&text_color=8b949e&icon_color=8b949e" alt="stats"/>
+  <img height="160" src="https://github-readme-stats.shion.dev/api/top-langs/?username=RobertBudnik&layout=compact&hide_border=true&bg_color=161b22&title_color=e6edf3&text_color=8b949e" alt="top langs"/>
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=RobertBudnik&theme=radical&hide_border=true&background=0d1117&ring=00ff9c&fire=00ff9c&currStreakLabel=00ff9c" alt="streak"/>
-</p>
-
----
-
-<p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="quote"/>
+  <img src="https://streak-stats.demolab.com/?user=RobertBudnik&hide_border=true&background=161b22&stroke=30363d&ring=8b949e&fire=e6edf3&currStreakNum=e6edf3&sideNums=e6edf3&currStreakLabel=e6edf3&sideLabels=8b949e&dates=6e7681" alt="streak"/>
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00ff9c,50:0f3d2e,100:0d1117&height=100&section=footer" alt="footer"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:2d333b,100:0d1117&height=4" alt=""/>
 </p>
+
+<p align="center"><sub><code>$ exit</code></sub></p>
