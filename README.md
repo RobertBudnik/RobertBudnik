@@ -53,10 +53,9 @@ status:    buduję pierwsze projekty z bezpieczeństwa
 ### `04` &nbsp;projects
 
 <!-- PROJECTS:START -->
-```text
-> ls ~/projects
-  // w budowie — pierwsze projekty z cyberbezpieczeństwa już niedługo
-```
+<p align="center">
+  <a href="https://github.com/RobertBudnik/REELS_MAKER"><img width="49%" src="https://github-readme-stats.shion.dev/api/pin/?username=RobertBudnik&repo=REELS_MAKER&hide_border=true&bg_color=161b22&title_color=e6edf3&text_color=8b949e&icon_color=8b949e" alt="REELS_MAKER"/></a>
+</p>
 <!-- PROJECTS:END -->
 
 <br/>
