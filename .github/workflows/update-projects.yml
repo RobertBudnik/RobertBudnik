@@ -29,24 +29,56 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USERNAME: ${{ github.repository_owner }}
-        run: python scripts/update_projects.py
+        run: |
+          set -euo pipefail
+          echo "Uruchamiam synchronizację sekcji projektów..."
+          python scripts/update_projects.py
 
       - name: Generate SVG graphics
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USERNAME: ${{ github.repository_owner }}
         run: |
+          set -euo pipefail
+          echo "Instaluję zależności do generowania assetów..."
           pip install --quiet fonttools==4.66.1
+          echo "Generuję grafiki SVG..."
           python scripts/profile_assets.py
+
+      - name: Validate generated changes
+        run: |
+          set -euo pipefail
+          echo "Waliduję zestaw zmian i brak plików cache..."
+
+          if git status --porcelain | grep -E '__pycache__/|\.pyc$' >/dev/null; then
+            echo "Wykryto pliki __pycache__ lub .pyc w zmianach. Przerywam workflow."
+            git status --porcelain
+            exit 1
+          fi
+
+          disallowed="$(git status --porcelain | awk '{print $2}' | grep -vE '^(README\.md|assets/.*|data/.*)$' || true)"
+          if [ -n "$disallowed" ]; then
+            echo "Wykryto nieoczekiwane pliki poza README/assets/data:"
+            echo "$disallowed"
+            exit 1
+          fi
 
       - name: Commit changes
         run: |
+          set -euo pipefail
           if [ -z "$(git status --porcelain README.md assets data)" ]; then
-            echo "Brak zmian."
+            echo "Brak zmian w README/assets/data."
             exit 0
           fi
+
           git config user.name "github-actions[bot]"
           git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
           git add README.md assets data
+
+          if git diff --cached --quiet; then
+            echo "Po dodaniu brak zmian do commitu."
+            exit 0
+          fi
+
           git commit -m "chore: update projects, certs and activity"
           git push
