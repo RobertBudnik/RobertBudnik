@@ -21,8 +21,10 @@
 <!-- PROJECTS:START -->
 <p><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/projects-dark.svg">
-  <img alt="Projekty: ls -la ~/projects – total 0, pierwsze projekty z cyberbezpieczeństwa są w przygotowaniu" src="assets/projects-light.svg" width="100%">
+  <img alt="Projekty: moje-nowe-repo: " src="assets/projects-light.svg" width="100%">
 </picture></p>
+
+[moje-nowe-repo](https://github.com/RobertBudnik/moje-nowe-repo)
 <!-- PROJECTS:END -->
 
 <p><picture>
