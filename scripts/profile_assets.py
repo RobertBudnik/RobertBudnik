@@ -342,13 +342,14 @@ def tools(t):
     return svg(h, "Narzędzia: " + ", ".join(n for _, n in TOOLS), "\n".join(body))
 
 
-def projects(t, repos):
+def projects(t, repos, total=None):
     size, lh = 14, 26
     cw = MONO.width("x", size)
     cols = int((W - 2 * 24 - 2 * 24) / cw)
     lines = []  # lista segmentów (tekst, kolor)
     lines.append(None)  # prompt
-    lines.append([(f"total {len(repos)}", t["dim"])])
+    total_count = len(repos) if total is None else total
+    lines.append([(f"total {total_count}", t["dim"])])
     if not repos:
         lines.append([("# pierwsze projekty z cyberbezpieczeństwa są w przygotowaniu", t["dim"])])
     for r in repos:
@@ -548,8 +549,11 @@ def fetch_days():
 
 def fetch_repos():
     sys.path.insert(0, str(Path(__file__).resolve().parent))
-    from update_projects import fetch_public_repos, pick
-    return pick(fetch_public_repos())
+    from update_projects import MAX_PROJECTS, fetch_public_repos, filter_repos
+    repos = filter_repos(fetch_public_repos())
+    visible = repos[:MAX_PROJECTS]
+    print(f"Projekty do SVG: total={len(repos)}, pokazuję={len(visible)}")
+    return visible, len(repos)
 
 
 def load_certs():
@@ -618,9 +622,13 @@ def main():
 
     if args.static:
         return
-    repos = SAMPLE_REPOS if args.sample else fetch_repos()
+    if args.sample:
+        repos = SAMPLE_REPOS
+        total_repos = len(SAMPLE_REPOS)
+    else:
+        repos, total_repos = fetch_repos()
     for mode, t in THEMES.items():
-        write(out / f"projects-{mode}.svg", projects(t, repos))
+        write(out / f"projects-{mode}.svg", projects(t, repos, total=total_repos))
     try:
         days = sample_days() if args.sample else fetch_days()
     except Exception as e:  # noqa: BLE001

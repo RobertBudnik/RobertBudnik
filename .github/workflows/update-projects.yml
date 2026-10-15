@@ -27,22 +27,26 @@ jobs:
 
       - name: Update projects section
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
           GH_USERNAME: ${{ github.repository_owner }}
         run: python scripts/update_projects.py
 
       - name: Generate SVG graphics
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
           GH_USERNAME: ${{ github.repository_owner }}
         run: |
+          set -euo pipefail
           pip install --quiet fonttools==4.66.1
           python scripts/profile_assets.py
+          echo "Status plików po generacji:"
+          git status --short README.md assets data || true
 
       - name: Commit changes
         run: |
+          set -euo pipefail
           if [ -z "$(git status --porcelain README.md assets data)" ]; then
-            echo "Brak zmian."
+            echo "Brak zmian po odświeżeniu README/assets/data."
             exit 0
           fi
           git config user.name "github-actions[bot]"
