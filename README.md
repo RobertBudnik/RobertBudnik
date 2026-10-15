@@ -24,18 +24,8 @@
   <img alt="Projekty: moje-nowe-repo: " src="assets/projects-light.svg" width="100%">
 </picture></p>
 
-[moje-nowe-repo](https://github.com/RobertBudnik/moje-nowe-repo)
 <!-- PROJECTS:END -->
 
-<p><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/certs-dark.svg">
-  <img alt="Certyfikaty i kursy: lista w przygotowaniu (3 puste sloty)" src="assets/certs-light.svg" width="100%">
-</picture></p>
-
-<p><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
-  <img alt="Aktywność na GitHubie z ostatnich 365 dni: liczba kontrybucji, rekordowy dzień i aktywne dni, z falą dziennych kontrybucji" src="assets/activity-light.svg" width="100%">
-</picture></p>
 
 <p><a href="mailto:robertbudnik30@gmail.com">
   <picture>
@@ -44,6 +34,5 @@
   </picture>
 </a></p>
 
-[Instagram](https://instagram.com/Budnik.jr_) · [E-mail](mailto:robertbudnik30@gmail.com)
 
 <p align="center"><sub><code>Connection to budnik closed.</code></sub></p>
