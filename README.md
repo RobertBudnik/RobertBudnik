@@ -24,6 +24,7 @@
   <img alt="Projekty: moje-nowe-repo: " src="assets/projects-light.svg" width="100%">
 </picture></p>
 
+[moje-nowe-repo](https://github.com/RobertBudnik/moje-nowe-repo)
 <!-- PROJECTS:END -->
 
 
