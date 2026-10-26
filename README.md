@@ -21,10 +21,10 @@
 <!-- PROJECTS:START -->
 <p><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/projects-dark.svg">
-  <img alt="Projekty: moje-nowe-repo: ; zzcms: " src="assets/projects-light.svg" width="100%">
+  <img alt="Projekty: MAPPER: ; zzcms: " src="assets/projects-light.svg" width="100%">
 </picture></p>
 
-[moje-nowe-repo](https://github.com/RobertBudnik/moje-nowe-repo) · [zzcms](https://github.com/RobertBudnik/zzcms)
+[MAPPER](https://github.com/RobertBudnik/MAPPER) · [zzcms](https://github.com/RobertBudnik/zzcms)
 <!-- PROJECTS:END -->
 
 
