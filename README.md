@@ -21,10 +21,10 @@
 <!-- PROJECTS:START -->
 <p><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/projects-dark.svg">
-  <img alt="Projekty: MAPPER: ; zzcms: " src="assets/projects-light.svg" width="100%">
+  <img alt="Projekty: Dokumentacja_mojego_domowego_laboratorium: Repozytorium w którym bede dokumentował rozwój mojego Home lab-a ; zzcms: " src="assets/projects-light.svg" width="100%">
 </picture></p>
 
-[MAPPER](https://github.com/RobertBudnik/MAPPER) · [zzcms](https://github.com/RobertBudnik/zzcms)
+[Dokumentacja_mojego_domowego_laboratorium](https://github.com/RobertBudnik/Dokumentacja_mojego_domowego_laboratorium) · [zzcms](https://github.com/RobertBudnik/zzcms)
 <!-- PROJECTS:END -->
 
 
