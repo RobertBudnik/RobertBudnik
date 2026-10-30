@@ -21,10 +21,10 @@
 <!-- PROJECTS:START -->
 <p><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/projects-dark.svg">
-  <img alt="Projekty: Dokumentacja_mojego_domowego_laboratorium: Repozytorium w którym bede dokumentował rozwój mojego Home lab-a ; zzcms: " src="assets/projects-light.svg" width="100%">
+  <img alt="Projekty: zajecia-cms-zdjecia-strony: zajecia cms zdjecia strony; Dokumentacja_mojego_domowego_laboratorium: Repozytorium w którym bede dokumentował rozwój mojego Home lab-a ; zzcms: " src="assets/projects-light.svg" width="100%">
 </picture></p>
 
-[Dokumentacja_mojego_domowego_laboratorium](https://github.com/RobertBudnik/Dokumentacja_mojego_domowego_laboratorium) · [zzcms](https://github.com/RobertBudnik/zzcms)
+[zajecia-cms-zdjecia-strony](https://github.com/RobertBudnik/zajecia-cms-zdjecia-strony) · [Dokumentacja_mojego_domowego_laboratorium](https://github.com/RobertBudnik/Dokumentacja_mojego_domowego_laboratorium) · [zzcms](https://github.com/RobertBudnik/zzcms)
 <!-- PROJECTS:END -->
 
 
