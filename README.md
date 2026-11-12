@@ -1,21 +1,21 @@
 <p><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-  <img alt="robert@budnik — ssh — 10.0.0.1 · online. ❯ whoami: Robert Budnik. Uczę się bronić sieci i systemów, a każdy krok dokumentuję w projektach. Lokalizacja: Poznań, PL · Studia: Informatyka · CDV · Kierunek: Cybersecurity · Status: Szukam stażu" src="assets/hero-light.svg" width="100%">
+  <img alt="robert@budnik — ssh — 10.0.0.1 · online. ❯ whoami: Robert Budnik. Uczę się sieci i systemów. Lokalizacja: Poznań, PL · Studia: Informatyka · CDV · Kierunek: Cybersecurity · Status: Szukam stażu" src="assets/hero-light.svg" width="100%">
 </picture></p>
 
 <p><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/osi-dark.svg">
-  <img alt="Stos, który rozbieram – model OSI warstwa po warstwie. Uczę się: L7 Aplikacji (DNS, DHCP, HTTP), L4 Transportowa (TCP / UDP, porty, analiza ruchu), L3 Sieciowa (adresacja IP, podsieci, routing). Następne: L6 Prezentacji, L5 Sesji, L2 Łącza danych, L1 Fizyczna." src="assets/osi-light.svg" width="100%">
+  <img alt="Stos, który rozbieram – model OSI warstwa po warstwie. Uczę się: L3 Transportowa (TCP / UDP, porty, analiza ruchu), L3 Sieciowa (adresacja IP, podsieci, routing). Następne: L6 Prezentacji, L5 Sesji, L2 Łącza danych, L1 Fizyczna." src="assets/osi-light.svg" width="100%">
 </picture></p>
 
 <p><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/tracks-dark.svg">
-  <img alt="Linux: terminal, uprawnienia, procesy i usługi, skrypty Bash. Python: automatyzacja, skrypty narzędziowe, praca z API. Security: bezpieczeństwo sieci, hardening systemów, narzędzia do analizy." src="assets/tracks-light.svg" width="100%">
+  <img alt="Linux: terminal, uprawnienia, procesy i usługi." src="assets/tracks-light.svg" width="100%">
 </picture></p>
 
 <p><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/tools-dark.svg">
-  <img alt="Narzędzia: Python, C++, Bash, Linux, Git, VS Code" src="assets/tools-light.svg" width="100%">
+  <img alt="Narzędzia: Bash, Linux, Git, VS Code" src="assets/tools-light.svg" width="100%">
 </picture></p>
 
 <!-- PROJECTS:START -->
