@@ -4,11 +4,6 @@
 </picture></p>
 
 <p><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/osi-dark.svg">
-  <img alt="Stos, który rozbieram – model OSI warstwa po warstwie. Uczę się: L3 Transportowa (TCP / UDP, porty, analiza ruchu), L3 Sieciowa (adresacja IP, podsieci, routing). Następne: L6 Prezentacji, L5 Sesji, L2 Łącza danych, L1 Fizyczna." src="assets/osi-light.svg" width="100%">
-</picture></p>
-
-<p><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/tracks-dark.svg">
   <img alt="Linux: terminal, uprawnienia, procesy i usługi." src="assets/tracks-light.svg" width="100%">
 </picture></p>
