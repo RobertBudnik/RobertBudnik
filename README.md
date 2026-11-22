@@ -16,10 +16,10 @@
 <!-- PROJECTS:START -->
 <p><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/projects-dark.svg">
-  <img alt="Projekty: e-commerce-web: Szablon-strony; Cisco_Packet_Tracer-: REPOZYTORIUM Z PRACAMI W CISCO ; zajecia-cms-zdjecia-strony: zajecia cms zdjecia strony; Dokumentacja_mojego_domowego_laboratorium: Repozytorium w którym bede dokumentował rozwój mojego Home lab-a " src="assets/projects-light.svg" width="100%">
+  <img alt="Projekty: Dokumentacja_mojego_domowego_laboratorium: Repozytorium w którym bede dokumentował rozwój mojego Home lab-a ; e-commerce-web: Szablon-strony; Cisco_Packet_Tracer-: REPOZYTORIUM Z PRACAMI W CISCO ; zajecia-cms-zdjecia-strony: zajecia cms zdjecia strony" src="assets/projects-light.svg" width="100%">
 </picture></p>
 
-[e-commerce-web](https://github.com/RobertBudnik/e-commerce-web) · [Cisco_Packet_Tracer-](https://github.com/RobertBudnik/Cisco_Packet_Tracer-) · [zajecia-cms-zdjecia-strony](https://github.com/RobertBudnik/zajecia-cms-zdjecia-strony) · [Dokumentacja_mojego_domowego_laboratorium](https://github.com/RobertBudnik/Dokumentacja_mojego_domowego_laboratorium)
+[Dokumentacja_mojego_domowego_laboratorium](https://github.com/RobertBudnik/Dokumentacja_mojego_domowego_laboratorium) · [e-commerce-web](https://github.com/RobertBudnik/e-commerce-web) · [Cisco_Packet_Tracer-](https://github.com/RobertBudnik/Cisco_Packet_Tracer-) · [zajecia-cms-zdjecia-strony](https://github.com/RobertBudnik/zajecia-cms-zdjecia-strony)
 <!-- PROJECTS:END -->
 
 
